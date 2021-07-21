@@ -13,7 +13,7 @@ input.onButtonPressed(Button.A, function () {
 })
 let Move = 0
 let Fireball: game.LedSprite = null
-game.setLife(5)
+game.setLife(3)
 let Monster = game.createSprite(4, 0)
 let Wizard = game.createSprite(1, 3)
 Fireball = game.createSprite(1, 3)
@@ -29,7 +29,7 @@ basic.forever(function () {
 })
 basic.forever(function () {
     Monster.turn(Direction.Right, randint(0, 359))
-    Monster.move(0.5)
+    Monster.move(1)
     Monster.ifOnEdgeBounce()
     if (Wizard.isTouching(Monster)) {
         game.removeLife(1)
